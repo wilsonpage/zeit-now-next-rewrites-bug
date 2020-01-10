@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "public": true,
+  "name": "tmp-nextjs-example",
+
+  "rewrites": [
+    {
+      "source": "/hello",
+      "destination": "/api/hello-world"
+    },
+    {
+      "source": "/hello-regex/(.*)",
+      "destination": "/api/hello-name?name=$1"
+    },
+    {
+      "source": "/hello-param/:name",
+      "destination": "/api/hello-name?name=:name"
+    }
+  ]
+}
